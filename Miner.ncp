@@ -7,9 +7,13 @@
       <Entity type="Class">
         <Name>Character</Name>
         <Access>Public</Access>
-        <Location left="1078" top="609" />
+        <Location left="1078" top="608" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
+        <Member type="Field">protected string name</Member>
+        <Member type="Field">protected int HP</Member>
+        <Member type="Method">public void Update()</Member>
+        <Member type="Property">public string Name { get; set; }</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
@@ -18,6 +22,13 @@
         <Location left="856" top="878" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
+        <Member type="Field">private int exp</Member>
+        <Member type="Field">private int[] upgrades</Member>
+        <Member type="Field">private int mana</Member>
+        <Member type="Field">private Dictionary&lt;string, int&gt; damages</Member>
+        <Member type="Constructor">public MainCharacter(string name, Vector2 position, Vector2 size, bool hasSprite = false, string spritePath = "")</Member>
+        <Member type="Property">public int Exp { get; }</Member>
+        <Member type="Property">public int[] Upgrades { get; set; }</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
@@ -34,6 +45,7 @@
         <Location left="1307" top="878" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
+        <Member type="Field">int damage</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
@@ -45,7 +57,7 @@
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
-        <Name>PickupHp</Name>
+        <Name>PickupHP</Name>
         <Access>Public</Access>
         <Location left="118" top="859" />
         <Size width="162" height="216" />
@@ -71,7 +83,7 @@
       <Entity type="Class">
         <Name>BigExpDrop</Name>
         <Access>Public</Access>
-        <Location left="222" top="1144" />
+        <Location left="230" top="1249" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -79,7 +91,7 @@
       <Entity type="Class">
         <Name>SmallExpDrop</Name>
         <Access>Public</Access>
-        <Location left="497" top="1144" />
+        <Location left="512" top="1249" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
@@ -87,18 +99,37 @@
       <Entity type="Class">
         <Name>GameObject</Name>
         <Access>Public</Access>
-        <Location left="706" top="266" />
-        <Size width="162" height="216" />
+        <Location left="685" top="264" />
+        <Size width="189" height="216" />
         <Collapsed>False</Collapsed>
+        <Member type="Field">protected Vector2 position</Member>
+        <Member type="Field">protected Vector2 size</Member>
+        <Member type="Field">protected string spritePath</Member>
+        <Member type="Field">protected bool hasSprite</Member>
+        <Member type="Property">public Vector2 Position { get; set; }</Member>
+        <Member type="Property">public Vector2 Size { get; set; }</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>Scene</Name>
         <Access>Public</Access>
-        <Location left="1401" top="282" />
+        <Location left="1307" top="253" />
         <Size width="162" height="216" />
         <Collapsed>False</Collapsed>
         <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Controlls</Name>
+        <Access>Public</Access>
+        <Location left="200" top="219" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Value>Up</Value>
+        <Value>Down</Value>
+        <Value>Left</Value>
+        <Value>Right</Value>
+        <Value>Shoot</Value>
+        <Value>Magic</Value>
       </Entity>
     </Entities>
     <Relationships>

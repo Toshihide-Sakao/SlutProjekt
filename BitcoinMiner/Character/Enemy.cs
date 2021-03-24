@@ -5,6 +5,6 @@ namespace BitcoinMiner.Character
 {
     public class Enemy : Character
     {
-        private int Damage;
+        private int damage;
     }
 }
